@@ -10,6 +10,7 @@ $bg2:rgb(30, 30, 175);
 *,p,h1,h2,h3,h4,h5,h6{
     margin: 0;
     padding: 0;
+    text-align: center;
   }
   
   
@@ -24,6 +25,7 @@ $bg2:rgb(30, 30, 175);
     grid-column: 1/-1;
     font-size: $FontS;
     font-weight: $FontS;
+    grid-row: 2/-1;
     p{
         background-color: $bg2;
     }
@@ -39,3 +41,52 @@ body{
     background-color: $bg;
   }
   
+
+
+#Main {
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(5,20vh);
+    background: rgb(197, 33, 33);
+}
+
+.widget_container{
+background-color: red !important;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+
+#formBox,#record-head{
+  margin: 0 auto;
+  width: 343px; 
+  padding: 20px;
+  border-radius: 8px/7px; 
+  background-color: #ebebeb; 
+  box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+  border: solid 1px #cbc9c9;
+
+  input{
+margin-bottom: 20px;
+width: 250px; 
+  height: 39px; 
+  border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
+  background-color: #fff; 
+  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  border: solid 1px #cbc9c9;
+  margin-left: -5px;
+  margin-top: 13px; 
+  padding-left: 10px;
+  }
+}
+
+#record-head{
+  width: 82%;
+  margin: 1% auto;
+}
+
+#tableData{
+  border-radius: 8px/7px; 
+}

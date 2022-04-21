@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragable</title>
+
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            width: 90%;
+            height: 90vh;
+            background-color: cadetblue;
+        }
+
+        .container {
+            width: 200px;
+            height: auto;
+            background-color: blueviolet;
+            padding: 10px
+        }
+
+        .dragable {
+            background-color: #fff;
+            color: #000;
+            font-size: 1rem;
+            cursor: move;
+            padding: 5px 10px;
+        }
+
+        .dragable.draging {
+            opacity: .5;
+            background-color: cyan;
+        }
+    </style>
+    <div class="container">
+        <p class="dragable" draggable="true">1</p>
+        <p class="dragable" draggable="true">2</p>
+    </div>
+    <div class="container">
+        <p class="dragable" draggable="true">3</p>
+        <p class="dragable" draggable="true">4</p>
+    </div>
+    <div class="container">
+        <p class="dragable" draggable="true">3</p>
+        <p class="dragable" draggable="true">4</p>
+    </div>
+    <div class="container">
+        <p class="dragable" draggable="true">3</p>
+        <p class="dragable" draggable="true">4</p>
+    </div>
+    <script>
+        const dragables = document.querySelectorAll(".dragable");
+        const container = document.querySelectorAll(".container");
+
+        dragables.forEach(drag => {
+            drag.addEventListener("dragstart", () => {
+                console.log("drag");
+                drag.classList.add("draging");
+            })
+            drag.addEventListener("dragend", () =>{
+                drag.classList.remove("draging");
+             })
+            });
+
+        container.forEach(conatiners => {
+            conatiners.addEventListener("dragover", e => {
+                // const afterElement = getDragElement(conatiners,e.clientY)
+                console.log("dragover");
+                e.preventDefault();
+                const draging = document.querySelector(".draging");
+                conatiners.appendChild(draging);
+                // if(afterElement==null)
+                // {
+
+                // }
+                // else{
+                //     conatiners.insertBefore(draging,afterElement)
+                // }
+            });
+        });
+
+
+        // const getDragElement=(containers,y)=>{
+        //     const dragElement = [...containers.querySelectorAll(".dragable:not(.draging)")];
+
+        //     return dragElement.reduce((closest,child)=>{
+        //         const box = child.getBoundingClientRect();
+        //         console.log(box);
+        //         const offset = box.top - box.height/2;
+        //         if(offset<0 &&offset >closest.offset ){
+        //             return {offset:offset,elemet:child}
+        //         }
+        //         else{
+        //             return closest;
+        //         }
+        //     })
+        // }
+        // let full = document.documentElement;
+        // full.addEventListener("click",()=>{full.requestFullscreen()})
+        // full.addEventListener("dblclick",()=>{document.exitFullscreen()})
+    </script>
+</body>
+
+</html>

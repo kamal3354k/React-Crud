@@ -1,0 +1,48 @@
+ [{
+         "id": 0,
+         "name": "Kamal",
+         "Email": "Kamal@gmail.com",
+         "Number": "9876543212",
+         "Address": {
+             "Hn": "c-145",
+             "StreetNumber": "7",
+             "State": "Delhi"
+         }
+     },
+     {
+         "id": 1,
+         "name": "Ravi",
+         "Email": "Ravi@gmail.com",
+         "Number": "343",
+         "Address": {
+             "Hn": "c-345",
+             "StreetNumber": "57",
+             "State": "Delhi"
+         }
+     }
+     ,
+     {
+         "id": 2,
+         "name": "Aniket",
+         "Email": "Aniket@gmail.com",
+         "Number": "167556787654",
+         "Address": {
+             "Hn": "c-435",
+             "StreetNumber": "47",
+             "State": "Delhi"
+         }
+     }
+     ,
+     {
+         "id": 3,
+         "name": "Aarush",
+         "Email": "Aarush@gmail.com",
+         "Number": "167556787654",
+         "Address": {
+             "Hn": "c-435",
+             "StreetNumber": "47",
+             "State": "Delhi"
+         }
+     }
+
+ ]
